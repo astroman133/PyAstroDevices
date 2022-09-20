@@ -1,0 +1,15 @@
+{
+    "FOCUSER_ADDRESS": "127.0.0.1:32323", 
+    "FOCUSER_DEVICENUM": 0, 
+    "FOCUSER_DRIVER_NAME": "Alpaca Focuser Sim", 
+    "FOCUSER_PROTOCOL": "http", 
+    "MAIN_WINDOW_HEIGHT": 590, 
+    "MAIN_WINDOW_LEFT": 1974, 
+    "MAIN_WINDOW_TITLE": "ASCOM Device Control", 
+    "MAIN_WINDOW_TOP": 179, 
+    "MAIN_WINDOW_WIDTH": 420, 
+    "TELESCOPE_ADDRESS": "127.0.0.1:32323", 
+    "TELESCOPE_DEVICENUM": 0, 
+    "TELESCOPE_DRIVER_NAME": "Alpaca Telescope Sim", 
+    "TELESCOPE_PROTOCOL": "http"
+}

@@ -1,0 +1,110 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1683c669-aaa0-41b3-94e5-4a0ffec255db</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>PyAstroApp.py</StartupFile>
+    <SearchPath>..\PyAstroDevices;ScopeObjects;BusinessObjects;CustomControls;ScopeViews;Dialogs;FocuserObjects;FocuserViews</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PyAstroApp</Name>
+    <RootNamespace>PyAstroDevices</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\app_settings.py" />
+    <Compile Include="BusinessObjects\exception_formatter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\__init__.py" />
+    <Compile Include="CustomControls\integer_entry_widget.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomControls\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialogs\chooser.py" />
+    <Compile Include="CustomControls\float_entry_widget.py" />
+    <Compile Include="Dialogs\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FocuserObjects\focuser_mgr.py" />
+    <Compile Include="FocuserObjects\focuser_parameters.py" />
+    <Compile Include="FocuserObjects\focuser_status.py" />
+    <Compile Include="FocuserObjects\__init__.py" />
+    <Compile Include="FocuserViews\focuser_parameters_view.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FocuserViews\focuser_control_view.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FocuserViews\focuser_view.py" />
+    <Compile Include="FocuserViews\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScopeObjects\scope_helpers.py" />
+    <Compile Include="ScopeObjects\scope_capabilities.py" />
+    <Compile Include="ScopeViews\scope_capabilities_view.py" />
+    <Compile Include="ScopeObjects\scope_mgr.py" />
+    <Compile Include="ScopeViews\scope_direct_slew_view.py" />
+    <Compile Include="ScopeViews\scope_nudge_view.py" />
+    <Compile Include="ScopeObjects\scope_parameters.py" />
+    <Compile Include="ScopeViews\scope_parameters_view.py" />
+    <Compile Include="ScopeObjects\scope_status.py" />
+    <Compile Include="ScopeViews\scope_tracking_rates_view.py" />
+    <Compile Include="ScopeViews\scope_view.py" />
+    <Compile Include="ScopeObjects\__init__.py" />
+    <Compile Include="PyAstroApp.py" />
+    <Compile Include="ScopeViews\__init__.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessObjects\" />
+    <Folder Include="Assets\" />
+    <Folder Include="CustomControls\" />
+    <Folder Include="Dialogs\" />
+    <Folder Include="FocuserObjects\" />
+    <Folder Include="FocuserViews\" />
+    <Folder Include="ScopeViews\" />
+    <Folder Include="ScopeObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\stop.png" />
+    <Content Include="Assets\telescope.ico" />
+    <Content Include="requirements.txt" />
+    <Content Include="settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="venv\">
+      <Id>venv</Id>
+      <Version>3.10</Version>
+      <Description>venv (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
